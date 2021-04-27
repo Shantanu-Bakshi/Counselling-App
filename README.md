@@ -1,5 +1,6 @@
-# Counselling-App
-A react based online counselling app 
+# Incogice
+An anonymuous online counselling web application employing WebRTC.
+> Know more about WebRTC [here](https://webrtc.org/).
 
 # How to Run Locally
 1. First ensure Node.js is installed on your local machine, if not then <a href="https://nodejs.org/en/download/"> Download it from here </a>.
