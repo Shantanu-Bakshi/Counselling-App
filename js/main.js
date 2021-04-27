@@ -256,3 +256,22 @@ function stop() {
   pc.close();
   pc = null;
 }
+
+let mic_switch = true;
+let video_switch = true;
+
+function toggleVideo() {
+  if(localStream != null && localStream.getVideoTracks().length > 0){
+    video_switch = !video_switch;
+    localStream.getVideoTracks()[0].enabled = video_switch;
+    document.getElementById('videobtn').innerHTML = "Toggle Video Now: "+(video_switch?"ON":"OFF"); 
+  }
+}
+
+function toggleMic() {
+  if(localStream != null && localStream.getAudioTracks().length > 0){
+    mic_switch = !mic_switch;
+    localStream.getAudioTracks()[0].enabled = mic_switch;
+    document.getElementById('micbtn').innerHTML = "Toggle Audio Now: "+(mic_switch?"ON":"OFF");
+  } 
+}
