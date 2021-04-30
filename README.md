@@ -12,6 +12,6 @@ An anonymous online counselling web application built using WebRTC.
 
 > You'll need to restart your Node.js server each time you close a client tab or window.
 > If you have odd troubles with caching, try the following:
-1. Do a hard refresh by holding down Ctrl and clicking the Reload button.
-1. Restart the browser.
-1. Run ```npm cache clean``` from the command line.
+> 1. Do a hard refresh by holding down Ctrl and clicking the Reload button.
+> 1. Restart the browser.
+> 1. Run ```npm cache clean``` from the command line.
