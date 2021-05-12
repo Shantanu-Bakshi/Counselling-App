@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Incogice</title>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+
+  <h1>Realtime counselling with Incogice</h1>
+  
+  <div id="videos">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>
+  <button onclick="join_room('foogreat')">Join</button>
+  <button id="videobtn" onclick="toggleVideo()">Toggle Video Now: ON</button>
+  <button id="micbtn"   onclick="toggleMic()">Toggle Audio Now: ON</button>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+
+  
+</body>
+
+</html>
