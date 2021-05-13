@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
-
+<!---
+***Structure***
+call.html     == webpage for holding the call between users
+start_call()  == make user join the room based on their selection taking parameters from the URL
+localVideo    == video of the client himself
+remoteVideo   == video of the other client they have contacted
+!--->
 <head>
-
-  <title>Incogice</title>
-
+  <title>Call</title>
   <link rel="stylesheet" href="/css/main.css" />
+
   <script>
-    function start_call() {
+    function startCall() { // join the room using URL parameters
       const params = new URLSearchParams(window.location.search)
-      room_name = params.get('room_name');
+      room_name = params.get('room_name'); // search for room name in the URL
       join_room(room_name);
+    }
+    function endCall() {// end the call by closing the browser window
+      window.location.replace("index.html");
     }
   </script>
 </head>
 
-<body onload="start_call()">
-
-  <h1>Realtime counselling with Incogice</h1>
-  
+<body onload="startCall()">
   <div id="videos">
     <video id="localVideo" autoplay muted></video>
     <video id="remoteVideo" autoplay></video>
   </div>
   <button id="videobtn" onclick="toggleVideo()">Toggle Video Now: ON</button>
   <button id="micbtn"   onclick="toggleMic()">Toggle Audio Now: ON</button>
+  <button id="endbtn"   onclick="endCall()">End Call</button>
+  
+  
+  <!--- Javascripts -->
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   <script src="js/main.js"></script>
-
-  
 </body>
-
 </html>
