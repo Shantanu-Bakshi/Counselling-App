@@ -25,6 +25,16 @@ remoteVideo   == video of the other client they have contacted
     function endCall() {// end the call by closing the browser window
       window.location.replace("index.html");
     }
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } 
+      else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+    }
   </script>
 </head>
 
@@ -38,6 +48,7 @@ remoteVideo   == video of the other client they have contacted
   <button type = "button" class="btn btn-primary" id="videobtn" onclick="toggleVideo()">Toggle Video Now: ON</button>
   <button type = "button" class="btn btn-primary" id="micbtn"   onclick="toggleMic()">Toggle Audio Now: ON</button>
   <button type = "button" class="btn btn-primary" id="endbtn"   onclick="endCall()">End Call</button>
+  <button type = "button" class="btn btn-primary" id="fullscreenbtn"   onclick="toggleFullScreen()">Full Screen</button>
   
   <!--- Javascripts -->
   <script src="/socket.io/socket.io.js"></script>
