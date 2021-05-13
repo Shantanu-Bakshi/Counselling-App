@@ -6,10 +6,16 @@
   <title>Incogice</title>
 
   <link rel="stylesheet" href="/css/main.css" />
-
+  <script>
+    function start_call() {
+      const params = new URLSearchParams(window.location.search)
+      room_name = params.get('room_name');
+      join_room(room_name);
+    }
+  </script>
 </head>
 
-<body>
+<body onload="start_call()">
 
   <h1>Realtime counselling with Incogice</h1>
   
@@ -17,7 +23,6 @@
     <video id="localVideo" autoplay muted></video>
     <video id="remoteVideo" autoplay></video>
   </div>
-  <button onclick="join_room('foogreat')">Join</button>
   <button id="videobtn" onclick="toggleVideo()">Toggle Video Now: ON</button>
   <button id="micbtn"   onclick="toggleMic()">Toggle Audio Now: ON</button>
   <script src="/socket.io/socket.io.js"></script>

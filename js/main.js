@@ -34,8 +34,9 @@ var constraints = {
 /// Handle all room related tasks
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var socket = io.connect();
+
 function join_room(room){
-  var socket = io.connect();
 
   if (room !== '') {
     socket.emit('create or join', room);
@@ -49,6 +50,9 @@ function join_room(room){
 
   socket.on('full', function(room) {
     console.log('Room ' + room + ' is full.');
+    window.location = "index.html";
+    alert("Unable to enter !\nRoom is full, Check with the Councellor.")
+    
   });
 
   socket.on('join', function (room){
@@ -66,7 +70,7 @@ function join_room(room){
     console.log.apply(console, array);
   });
 
-
+}
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   /// Handle all Connection related tasks
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -267,7 +271,6 @@ function join_room(room){
     pc = null;
   }
 
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Toggle Mic and Video
