@@ -42,11 +42,12 @@ remoteVideo   == video of the other client they have contacted
   <div class = 'image' style="padding:30px;">
 
   <div id="videos">
-    <video id="localVideo" autoplay muted></video>
-    <video id="remoteVideo" autoplay></video>
+    <video id="remoteVideo" align="center" width="720" autoplay></video>
+    <video id="localVideo" align="right" width="360" autoplay muted></video>
+    
   </div>
-  <button type = "button" class="btn btn-primary" id="videobtn" onclick="toggleVideo()">Toggle Video Now: ON</button>
-  <button type = "button" class="btn btn-primary" id="micbtn"   onclick="toggleMic()">Toggle Audio Now: ON</button>
+  <button type = "button" class="btn btn-primary" id="videobtn" onclick="toggleVideo()">Toggle Video</button>
+  <button type = "button" class="btn btn-primary" id="micbtn"   onclick="toggleMic()">Toggle Audio</button>
   <button type = "button" class="btn btn-primary" id="endbtn"   onclick="endCall()">End Call</button>
   <button type = "button" class="btn btn-primary" id="fullscreenbtn"   onclick="toggleFullScreen()">Full Screen</button>
   

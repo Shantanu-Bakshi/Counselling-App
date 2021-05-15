@@ -1,19 +1,9 @@
-/* body {
-  background-color: aqua;
-}
-video {
-  max-width: 100%;
-  width: 600px;
-} */
-
 .counsel {
   display: flex;
-  padding: 10px;
+  padding: 7px;
   flex-direction: row;
   justify-content: space-between;
 }
-
-
 .w {
   background-image: './iamge.jpg';
   width: 10px;
