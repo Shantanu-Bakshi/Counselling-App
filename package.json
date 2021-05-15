@@ -1,13 +1,13 @@
 {
   "name": "incogice",
   "version": "0.0.1",
-  "description": "Anonymous web counselling platform",
+  "description": "An anonymous web counselling platform",
   "private": true,
   "dependencies": {
     "node-static": "^0.7.10",
     "socket.io": "^2.0.4"
   },
   "scripts": {
-    "test": "node index.js"
+    "test": "echo No Error found"
   }
 }
