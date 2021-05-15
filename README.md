@@ -12,7 +12,7 @@ An anonymous online counselling web application built using WebRTC and Node.js.
 1. From your browser, open ```localhost:8080```. Choose any counsellor, out of the available ones, and click on the corresponding ```Call``` button, allow any kind of access requests for using your camera and microphone (don't worry it is completely safe). 
 1. This should redirect you to a ```WebRTC``` call, where you would be the only one.
 1. Open ```localhost:8080``` again, in a new tab or window. Choose the same counsellor, as earlier, and again click on the ```Call``` button. You should be redirected to the call you joined earlier.
-> Now, you must be seeing two videos in each of the two tabs. The smaller video element in each tab/window displays your local stream and the other video is the remote video streamed via ```WebRTC``` to the second one. <br> <br>
+> Now, you must be seeing two videos in each of the two tabs. The smaller video element in each tab/window displays your localstream and the other one is the remote video streamed via ```WebRTC``` to the second one. <br> <br>
 > Experiment by stopping/starting sharing your audio or video from one tab/window and see it effect on the other one. <br>
 > You could also inspect both the webpages and verify that the first webpage would have a console log ```Message from server: Room <room_id> now has 0 client(s)``` where ```<room_id> ``` depends on the counsellor you chose and the second webpage would have a console log ```Message from server: Room <room_id> now has 1 client(s)```<br><br>
 > This means that initially the room was empty, had $0$ clients, when you clicked a ```Call``` button for the first time you joined a room with room-name ```<room_id>``` .
