@@ -8,7 +8,7 @@ An anonymous online counselling web application built using WebRTC and Node.js.
 1. Firstly ensure that ```Node.js``` is installed correctly on your local machine, if not then refer <a href="https://nodejs.org/en/download/">this</a>.
 1. Clone this repository.
 1. After launching an instance of command line in the root folder of this repository, run ``` npm install```. This would install all the required dependencies on your machine.
-1. Run  ``` node index.js``` from the commmand line. Now the ```Node.js``` server has started running. 
+1. Run  ``` node index.js``` from the commmand line. Now the ```Node.js``` server has started. 
 1. From your browser, open ```localhost:8080```. Choose any counsellor, out of the available ones, and click on the corresponding ```Call``` button, allow any kind of access requests for using your camera and microphone (don't worry it is completely safe). 
 1. This should redirect you to a ```WebRTC``` call, where you would be the only one.
 1. Open ```localhost:8080``` again, in a new tab or window. Choose the same counsellor, as earlier, and again click on the ```Call``` button. You should be redirected to the call you joined earlier.
