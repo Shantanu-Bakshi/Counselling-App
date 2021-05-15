@@ -28,29 +28,36 @@ remoteVideo   == video of the other client they have contacted
     function toggleFullScreen() {
       if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen();
+        document.getElementById("fullscreenbtn").innerHTML="Normal screen";
       } 
       else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+          document.getElementById("fullscreenbtn").innerHTML="Full screen";
+        }
       }
-    }
     }
   </script>
 </head>
 
-<body onload="startCall()">
+<body onload="startCall()" style="background-image: url('./css/call_background.jpg');">
   <div class = 'image' style="padding:30px;">
 
+  <!--- Videos of clients-->
   <div id="videos">
     <video id="remoteVideo" align="center" width="720" autoplay></video>
     <video id="localVideo" align="right" width="360" autoplay muted></video>
     
   </div>
-  <button type = "button" class="btn btn-primary" id="videobtn" onclick="toggleVideo()">Toggle Video</button>
-  <button type = "button" class="btn btn-primary" id="micbtn"   onclick="toggleMic()">Toggle Audio</button>
+
+  <!---Buttons-->
+  <div id="buttons" class="middle">
+  <button type = "button" class="btn btn-primary" id="videobtn" onclick="toggleVideo()">Stop sharing video</button>
+  <button type = "button" class="btn btn-primary" id="micbtn"   onclick="toggleMic()">Stop sharing audio</button>
   <button type = "button" class="btn btn-primary" id="endbtn"   onclick="endCall()">End Call</button>
-  <button type = "button" class="btn btn-primary" id="fullscreenbtn"   onclick="toggleFullScreen()">Full Screen</button>
-  
+  <button type = "button" class="btn btn-primary" id="fullscreenbtn"   onclick="toggleFullScreen()">Full screen</button>
+  </div>
+
   <!--- Javascripts -->
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
