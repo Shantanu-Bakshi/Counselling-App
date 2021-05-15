@@ -2,7 +2,7 @@ name: Test in different Node.js versions
 
 on:
   push:
-    branches: [] # add main
+    branches: [main] 
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-        # 
+        # test on differen version of Node.js
 
     steps:
     - uses: actions/checkout@v2
