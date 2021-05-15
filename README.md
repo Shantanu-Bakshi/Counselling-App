@@ -13,9 +13,9 @@ An anonymous online counselling web application built using WebRTC and Node.js.
 1. This should redirect you to a ```WebRTC``` call, where you would be the only one.
 1. Open ```localhost:8080``` again, in a new tab or window. Choose the same counsellor, as earlier, and again click on the ```Call``` button. You should be redirected to the call you joined earlier.
 > Now, you must be seeing two videos in each of the two tabs. The smaller video element in each tab/window displays your localstream and the other one is the remote video streamed via ```WebRTC``` from the other tab. <br> <br>
-> Experiment by stopping/starting sharing your audio or video from one tab/window and see it effect on the other one. <br>
+> Experiment by stopping/starting sharing your audio or video from one tab/window and see its effect on the other tab. <br>
 > You could also inspect both the webpages and verify that the first webpage would have a console log ```Message from server: Room <room_id> now has 0 client(s)``` where ```<room_id> ``` depends on the counsellor you chose and the second webpage would have a console log ```Message from server: Room <room_id> now has 1 client(s)```<br><br>
-> This means that initially the room was empty, had $0$ clients, when you clicked a ```Call``` button for the first time you joined a room with room-name ```<room_id>``` .
+> This means that initially the room was empty, had 0 clients, when you clicked a ```Call``` button for the first time you joined a room with room-name ```<room_id>``` .
 And before clicking the ```Call``` button for the second time, there was 1 client already present in the room.  
 
 >Once deployed Incogice would allow users to contact with other users using the same mechanism.
