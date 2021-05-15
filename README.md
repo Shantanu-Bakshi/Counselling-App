@@ -1,6 +1,7 @@
 # Incogice
-An anonymous online counselling web application built using WebRTC.
-> Know more about WebRTC [here](https://webrtc.org/).
+An anonymous online counselling web application built using WebRTC and Node.js.
+> Know more about WebRTC [here](https://webrtc.org/).<br>
+> Know more about Node.js [here](https://nodejs.org/en/).
 
 # How to Run Incogice Locally?
 1. Firstly ensure that ```Node.js``` is installed correctly on your local machine, if not then refer <a href="https://nodejs.org/en/download/">this</a>.
@@ -14,6 +15,8 @@ An anonymous online counselling web application built using WebRTC.
 > You could possibly inspect both the webpages and check that the first webpage would have a console log ```Message from server: Room <room_id> now has 0 client(s)``` where ```<room_id> ``` depends on the counsellor you chose and the second webpage would have a console log ```Message from server: Room <room_id> now has 1 client(s)``` <br>
 > This means that initially the room was empty, had 0 clients, when you clicked a ```Call``` button for the first time you joined a room with room-name ```<room_id>``` .
 Hence before clicking the ```Call``` button for the second time, there was 1 client already present in the room.  
+
+>Once deployed Incogice would allow users to contact other users using the same mechanism.
 
 Note: You'll need to restart the Node.js server each time you close a client tab or window.
 > If you are having odd troubles with caching, try the following:
